@@ -1,0 +1,23 @@
+{
+  "name": "ng-mtime",
+  "version": "1.0.0",
+  "description": "ng-mtime",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "requirejs": "^2.1.20"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heicx/ng-mtime.git"
+  },
+  "author": "heicx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heicx/ng-mtime/issues"
+  },
+  "homepage": "https://github.com/heicx/ng-mtime#readme"
+}
