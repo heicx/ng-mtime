@@ -7,7 +7,7 @@ require.config({
 		"amui": "../assets/js/amazeui.min",
 
 		"app": "app",
-		'list': 'js/list'
+		"listCtrl": "js/list"
 	},
 	shim: {
 		"amui": ["jquery"],

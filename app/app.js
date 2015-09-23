@@ -1,8 +1,11 @@
-define(["angularAMD", "angularRoute", "list"], function(angularAMD) {
-	var app = angular.module("myApp", ["ngRoute", "myApp.list"]);
+define(["angularAMD", "angularRoute"], function(angularAMD) {
+	var app = angular.module("myApp", ["ngRoute"]);
 	app.config(function($routeProvider) {
 		// list 为url跳转路径，通过list.js中的router捕获。
-		$routeProvider.otherwise({redirectTo: '/list'});
+		$routeProvider.when("/home", angularAMD.route({
+            templateUrl: 'views/list.html', controller: 'listCtrl'
+        })).
+        otherwise({redirectTo: "/home"});
 	});
 	return angularAMD.bootstrap(app);
 });
