@@ -1,0 +1,24 @@
+{
+  "name": "ng-mtime",
+  "version": "0.0.1",
+  "homepage": "https://github.com/heicx/ng-mtime",
+  "authors": [
+    "heicx_sudo <heicx_sudo@163.com>"
+  ],
+  "description": "ng-mtime",
+  "keywords": [
+    "mtime"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-route": "~1.4.5"
+  }
+}
