@@ -1,6 +1,6 @@
 {
   "name": "ng-mtime",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "ng-mtime",
   "main": "index.js",
   "dependencies": {
@@ -17,6 +17,7 @@
   "keywords": [
     "mtime"
   ],
+  "url": "git+https://github.com/heicx/ng-mtime.git",
   "author": "heicx",
   "license": "ISC",
   "bugs": {
