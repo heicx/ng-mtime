@@ -6,7 +6,6 @@ require.config({
 		"angularAMD": "../bower_components/angularAMD/angularAMD",
 		"amui": "../assets/js/amazeui.min",
 
-		"app": "app",
 		"listCtrl": "js/list"
 	},
 	shim: {
