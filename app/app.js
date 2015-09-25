@@ -3,7 +3,7 @@ define(["angularAMD", "angularRoute", "amui"], function(angularAMD) {
     app.config(function($routeProvider) {
         // list 为url跳转路径，通过list.js中的router捕获。
         $routeProvider.when("/home", angularAMD.route({
-            templateUrl: 'views/list.html?v=2233213',
+            templateUrl: 'views/list.html?v=21',
             controller: 'listCtrl'
         })).
         otherwise({

@@ -1,37 +1,31 @@
 'use strict';
 
 define(["app"], function(app) {
-    app.factory("fetchMovieLists", ["$http", function(http) {
-        // var fetch = function() {
-        //     var res = null;
-
-        //     http.get("data/city.json").
-        //     success(function(data) {
-        //         res = data;
-        //     }).
-        //     error(function(data) {
-
-        //     });
-        //     return res;
-        // }
+    app.factory("fetchMovieLists", ["$http", "$q", function($http, $q) {
+    	var def = $q.defer();
 
         return {
-            fetch: function() {
-                return http.get("data/city.json");
-            }
+        	fetch: function() {
+        		$http.get("data/city.json").
+	            success(function(data) {
+	                def.resolve(data);
+	            }).
+	            error(function(data) {
+	            	def.reject(data);
+	            });
+
+	            return def.promise;
+        	}
         }
     }]).
     controller("listCtrl", ["$scope", "fetchMovieLists", function($scope, movieList) {
         $scope.title = "mtime";
 
-        movieList.fetch().
-        success(function(data) {
-            console.log(data);
-        }).
-        error(function() {
-
+        var promise = movieList.fetch();
+        promise.then(function(cityData) {
+        	
+        }, function(FailReason) {
         });
-
     }]).
     directive("amFormSearch", function() {
         return {
