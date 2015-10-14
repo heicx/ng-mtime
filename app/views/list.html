@@ -13,4 +13,19 @@
             <button type="submit" class="am-btn am-btn-default am-btn-sm" ng-class="btnblue">搜索</button>
         </form>
     </div>
+    <ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
+  am-avg-md-3 am-avg-lg-4 am-gallery-default">
+        <li ng-repeat="film in ms">
+            <div class="am-gallery-item">
+                <a href="#">
+                    <div class="am-gallery-img">
+                        <img ng-src="{{film.img}}"/>
+                        <em>{{film.r}}</em>
+                    </div>
+                    <h3 class="am-gallery-title">{{film.tCn}}</h3>
+                    <div class="am-gallery-desc">{{film.commonSpecial}}</div>
+                </a>
+            </div>
+        </li>
+    </ul>
 </header>

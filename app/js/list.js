@@ -23,7 +23,7 @@ define(["app"], function(app) {
 
         var promise = movieList.fetch();
         promise.then(function(cityData) {
-        	console.log(cityData);
+        	$scope.ms = cityData;
         }, function(FailReason) {
         });
     }]).

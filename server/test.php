@@ -12,10 +12,11 @@
 
 			for($i=0;$i<count($result['ms']);$i++) {
 				$ms = $result['ms'][$i];
-				if($ms['r'] >= 7.9) {
+				if($ms['r'] >= 6.9) {
 					array_push($arr, $result['ms'][$i]);
 				}
 			}
+
 			print_r(json_encode($arr));
 		}
 	}
