@@ -1,4 +1,13 @@
 <?php
+	$status = isset($_GET["a"]) ? $_GET["a"] : 'default';
+
+	if($status == "default") {
+
+	}else if($status == "1"){
+		$t = new Test;
+		$t->getFilms();
+	}
+
 	class Test {
 		function getCinemasByCity(){
 			$result = file_get_contents("http://api.m.mtime.cn/OnlineLocationCinema/OnlineCinemasByCity.api?locationId=290");
@@ -20,5 +29,4 @@
 			print_r(json_encode($arr));
 		}
 	}
-	Test::getFilms();
 ?>

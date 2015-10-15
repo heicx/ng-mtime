@@ -8,14 +8,14 @@
     <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
         <form class="am-topbar-form am-topbar-left am-form-inline am-topbar-right" role="search">
             <div class="am-form-group">
-                <input type="text" am-form-search class="am-form-field am-input-sm" placeholder="搜索影片">
+                <input type="text" am-form-search class="am-form-field am-input-sm" ng-model="searchFilm" placeholder="搜索影片">
             </div>
             <button type="submit" class="am-btn am-btn-default am-btn-sm" ng-class="btnblue">搜索</button>
         </form>
     </div>
     <ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
   am-avg-md-3 am-avg-lg-4 am-gallery-default">
-        <li ng-repeat="film in ms">
+        <li ng-repeat="film in ms | filter:searchFilm">
             <div class="am-gallery-item">
                 <a href="#">
                     <div class="am-gallery-img">
